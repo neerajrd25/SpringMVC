@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.example.neeraj.model">
+	<class name="Employee" table="EMPLOYEE">
+		<id name="id" column="USER_ID">
+			<generator class="native" />
+		</id>
+		<property name="empName" column="EMPLOYEE_NAME" type="java.lang.String" />
+		<property name="salary" column="SALARY" type="java.lang.Double"/>
+		<property name="country" column="COUNTRY" type="java.lang.String" />
+		<!-- <property name="password" column="PASSWORD" /> <property name="email" 
+			column="EMAIL" /> -->
+	</class>
+</hibernate-mapping>
