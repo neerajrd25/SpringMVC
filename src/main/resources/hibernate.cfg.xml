@@ -5,18 +5,29 @@
 <hibernate-configuration>
 	<session-factory>
 		<!-- Database connection settings -->
-		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://192.168.56.103:3306/sti_datawarehouse</property>
+		<!-- <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> -->
+				<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+		<!-- <property name="hibernate.connection.url">jdbc:mysql://192.168.56.103:3306/sti_datawarehouse</property>
 		<property name="hibernate.connection.username">etl_alpha</property>
 
-		<property name="hibernate.connection.password">K4hVDudjrC</property>
+		<property name="hibernate.connection.password">K4hVDudjrC</property> -->
+
+
+		<property name="connection.url">jdbc:postgresql://ec2-54-217-250-0.eu-west-1.compute.amazonaws.com/d4k9qeoalkt3pv</property> <!-- BD Mane -->
+   		<property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+   		<property name="connection.username">abbkmobvvjrzue</property> <!-- DB User -->
+   		<property name="connection.password">6d4c3daba060cefa759dd6e53e6ae460cd8477a613534ef12c7114d603b4b0ff</property> <!-- DB Password -->
+
 
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="hibernate.connection.pool_size">1</property>
 
 		<!-- SQL dialect -->
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect
-		</property>
+		<!-- <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect
+		</property> -->
+		   		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
+
 
 		<!-- Enable Hibernate's automatic session context management -->
 		<property name="hibernate.current_session_context_class">thread</property>
